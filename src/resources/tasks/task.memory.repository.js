@@ -3,11 +3,11 @@ const Task = require('./task.model');
 const dbTasks = [];
 
 const getAllByBoardId = async boardId => {
-  return dbTasks.find(dbTask => dbTask.boardId === boardId);
+  return dbTasks.filter(dbTask => dbTask.boardId === boardId);
 };
 
 const getAllByUserId = async userId => {
-  return dbTasks.find(dbTask => dbTask.userId === userId);
+  return dbTasks.filter(dbTask => dbTask.userId === userId);
 };
 
 const getById = async id => {

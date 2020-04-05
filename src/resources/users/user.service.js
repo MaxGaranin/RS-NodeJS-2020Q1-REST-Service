@@ -1,20 +1,20 @@
 const usersRepo = require('./user.memory.repository');
 const tasksRepo = require('./../tasks/task.memory.repository');
 
-const getAll = () => usersRepo.getAll();
+const getAll = async () => await usersRepo.getAll();
 
-const getById = id => usersRepo.getById(id);
+const getById = async id => await usersRepo.getById(id);
 
-const create = user => usersRepo.create(user);
+const create = async user => await usersRepo.create(user);
 
-const update = user => usersRepo.update(user);
+const update = async user => await usersRepo.update(user);
 
-const remove = id => {
+const remove = async id => {
   usersRepo.remove(id);
-  const tasks = tasksRepo.getAllByUserId(id);
-  tasks.forEach(task => {
+  const tasks = await tasksRepo.getAllByUserId(id);
+  tasks.forEach(async task => {
     task.userId = null;
-    tasksRepo.update(task);
+    await tasksRepo.update(task);
   });
 };
 

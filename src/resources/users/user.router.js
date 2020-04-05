@@ -24,16 +24,18 @@ router.route('/').post(async (req, res) => {
   res.json(User.toResponse(userWithId));
 });
 
-router.route('/').put(async (req, res) => {
+router.route('/:id').put(async (req, res) => {
+  const id = req.params.id;
   const user = req.body;
+  user.id = id;
   await usersService.update(user);
-  res.status(200).send();
+  res.json(User.toResponse(user));
 });
 
 router.route('/:id').delete(async (req, res) => {
   const id = req.params.id;
   await usersService.remove(id);
-  res.status(200).send();
+  res.status(204).send();
 });
 
 module.exports = router;
