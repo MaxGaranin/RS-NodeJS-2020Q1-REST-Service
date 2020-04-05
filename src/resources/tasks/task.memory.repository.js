@@ -10,8 +10,8 @@ const getAllByUserId = async userId => {
   return dbTasks.filter(dbTask => dbTask.userId === userId);
 };
 
-const getById = async id => {
-  return dbTasks.find(dbTask => dbTask.id === id);
+const getById = async (id, boardId) => {
+  return dbTasks.find(dbTask => dbTask.id === id && dbTask.boardId === boardId);
 };
 
 const create = async task => {
@@ -25,8 +25,10 @@ const update = async task => {
   dbTasks[index] = task;
 };
 
-const remove = async id => {
-  const index = dbTasks.findIndex(dbBoard => dbBoard.id === id);
+const remove = async (id, boardId) => {
+  const index = dbTasks.findIndex(
+    dbTask => dbTask.id === id && dbTask.boardId === boardId
+  );
   dbTasks.splice(index, 1);
 };
 

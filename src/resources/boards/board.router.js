@@ -22,16 +22,18 @@ router.route('/').post(async (req, res) => {
   res.json(boardWithId);
 });
 
-router.route('/').put(async (req, res) => {
+router.route('/:id').put(async (req, res) => {
+  const id = req.params.id;
   const board = req.body;
+  board.id = id;
   await boardsService.update(board);
-  res.status(200).send();
+  res.json(board);
 });
 
 router.route('/:id').delete(async (req, res) => {
   const id = req.params.id;
   await boardsService.remove(id);
-  res.status(200).send();
+  res.status(204).send();
 });
 
 module.exports = router;
