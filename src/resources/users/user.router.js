@@ -1,41 +1,68 @@
 const router = require('express').Router();
+const HttpStatus = require('http-status-codes');
 const User = require('./user.model');
 const usersService = require('./user.service');
+const {
+  checkUserId,
+  checkUserData,
+  userNotFound
+} = require('./user.validator');
 
 router.route('/').get(async (req, res) => {
   const users = await usersService.getAll();
   // map user fields to exclude secret fields like "password"
-  res.json(users.map(User.toResponse));
+  res.status(HttpStatus.OK).json(users.map(User.toResponse));
 });
 
 router.route('/:id').get(async (req, res) => {
   const id = req.params.id;
+  if (!checkUserId(id, res)) return;
+
   const user = await usersService.getById(id);
-  if (user === undefined) {
-    res.status(404).json({ message: `User with id ${id} is not found` });
-  } else {
-    res.json(User.toResponse(user));
+  if (!user) {
+    userNotFound(id, res);
+    return;
   }
+
+  res.status(HttpStatus.OK).json(User.toResponse(user));
 });
 
 router.route('/').post(async (req, res) => {
-  const user = req.body;
-  const userWithId = await usersService.create(user);
-  res.json(User.toResponse(userWithId));
+  const userData = req.body;
+  if (!checkUserData(userData, res)) return;
+
+  const user = await usersService.create(userData);
+  res.status(HttpStatus.OK).json(User.toResponse(user));
 });
 
 router.route('/:id').put(async (req, res) => {
+  const userData = req.body;
+  if (!checkUserData(userData, res)) return;
+
   const id = req.params.id;
-  const user = req.body;
-  user.id = id;
-  await usersService.update(user);
-  res.json(User.toResponse(user));
+  if (!checkUserId(id, res)) return;
+  userData.id = id;
+
+  const result = await usersService.update(userData);
+  if (!result) {
+    userNotFound(id, res);
+    return;
+  }
+
+  res.status(HttpStatus.OK).json(User.toResponse(userData));
 });
 
 router.route('/:id').delete(async (req, res) => {
   const id = req.params.id;
-  await usersService.remove(id);
-  res.status(204).send();
+  if (!checkUserId(id, res)) return;
+
+  const result = await usersService.remove(id);
+  if (!result) {
+    userNotFound(id, res);
+    return;
+  }
+
+  res.status(HttpStatus.NO_CONTENT).end();
 });
 
 module.exports = router;

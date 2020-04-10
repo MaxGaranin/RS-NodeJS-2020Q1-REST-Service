@@ -1,4 +1,5 @@
 const express = require('express');
+const { finished } = require('stream');
 const swaggerUI = require('swagger-ui-express');
 const path = require('path');
 const YAML = require('yamljs');
@@ -12,6 +13,20 @@ const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'));
 app.use(express.json());
 
 app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+
+app.use((req, res, next) => {
+  const { method, url } = req;
+  const start = Date.now();
+
+  finished(res, () => {
+    // npm package on-finished
+    const ms = Date.now() - start;
+    const { statusCode } = res;
+    console.log(`${method} ${url} ${statusCode} [${ms}ms]`);
+  });
+
+  next();
+});
 
 app.use('/', (req, res, next) => {
   if (req.originalUrl === '/') {
