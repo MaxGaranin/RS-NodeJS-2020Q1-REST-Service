@@ -1,12 +1,11 @@
 const router = require('express').Router();
 const HttpStatus = require('http-status-codes');
+const createError = require('http-errors');
+const ash = require('express-async-handler');
 const User = require('./user.model');
 const usersService = require('./user.service');
-const {
-  checkUserId,
-  checkUserData,
-  userNotFound
-} = require('./user.validator');
+const { isValid } = require('./user.validator');
+const { isUuid } = require('./../../common/utils');
 
 router.route('/').get(async (req, res) => {
   const users = await usersService.getAll();
@@ -14,55 +13,73 @@ router.route('/').get(async (req, res) => {
   res.status(HttpStatus.OK).json(users.map(User.toResponse));
 });
 
-router.route('/:id').get(async (req, res) => {
-  const id = req.params.id;
-  if (!checkUserId(id, res)) return;
+router.route('/:id').get(
+  ash(async (req, res) => {
+    const id = req.params.id;
+    if (!isUuid(id)) {
+      throw createError(HttpStatus.BAD_REQUEST, `User id ${id} is not valid`);
+    }
 
-  const user = await usersService.getById(id);
-  if (!user) {
-    userNotFound(id, res);
-    return;
-  }
+    const user = await usersService.getById(id);
 
-  res.status(HttpStatus.OK).json(User.toResponse(user));
-});
+    if (!user) {
+      throw createError(HttpStatus.BAD_REQUEST, `User id '${id}' not found`);
+    }
 
-router.route('/').post(async (req, res) => {
-  const userData = req.body;
-  if (!checkUserData(userData, res)) return;
+    res.status(HttpStatus.OK).json(User.toResponse(user));
+  })
+);
 
-  const user = await usersService.create(userData);
-  res.status(HttpStatus.OK).json(User.toResponse(user));
-});
+router.route('/').post(
+  ash(async (req, res) => {
+    const userData = req.body;
+    if (!isValid(userData)) {
+      throw createError(HttpStatus.BAD_REQUEST, 'User data is not valid');
+    }
 
-router.route('/:id').put(async (req, res) => {
-  const userData = req.body;
-  if (!checkUserData(userData, res)) return;
+    const user = await usersService.create(userData);
+    res.status(HttpStatus.OK).json(User.toResponse(user));
+  })
+);
 
-  const id = req.params.id;
-  if (!checkUserId(id, res)) return;
-  userData.id = id;
+router.route('/:id').put(
+  ash(async (req, res) => {
+    const userData = req.body;
+    if (!isValid(userData)) {
+      throw createError(HttpStatus.BAD_REQUEST, 'User data is not valid');
+    }
 
-  const result = await usersService.update(userData);
-  if (!result) {
-    userNotFound(id, res);
-    return;
-  }
+    const id = req.params.id;
+    if (!isUuid(id)) {
+      throw createError(HttpStatus.BAD_REQUEST, `User id ${id} is not valid`);
+    }
 
-  res.status(HttpStatus.OK).json(User.toResponse(userData));
-});
+    userData.id = id;
+    const result = await usersService.update(userData);
 
-router.route('/:id').delete(async (req, res) => {
-  const id = req.params.id;
-  if (!checkUserId(id, res)) return;
+    if (!result) {
+      throw createError(HttpStatus.BAD_REQUEST, `User id '${id}' not found`);
+    }
 
-  const result = await usersService.remove(id);
-  if (!result) {
-    userNotFound(id, res);
-    return;
-  }
+    res.status(HttpStatus.OK).json(User.toResponse(userData));
+  })
+);
 
-  res.status(HttpStatus.NO_CONTENT).end();
-});
+router.route('/:id').delete(
+  ash(async (req, res) => {
+    const id = req.params.id;
+    if (!isUuid(id)) {
+      throw createError(HttpStatus.BAD_REQUEST, `User id ${id} is not valid`);
+    }
+
+    const result = await usersService.remove(id);
+
+    if (!result) {
+      throw createError(HttpStatus.BAD_REQUEST, `User id '${id}' not found`);
+    }
+
+    res.status(HttpStatus.NO_CONTENT).end();
+  })
+);
 
 module.exports = router;

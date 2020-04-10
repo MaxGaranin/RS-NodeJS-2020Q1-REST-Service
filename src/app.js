@@ -3,6 +3,8 @@ const { finished } = require('stream');
 const swaggerUI = require('swagger-ui-express');
 const path = require('path');
 const YAML = require('yamljs');
+const HttpStatus = require('http-status-codes');
+const createError = require('http-errors');
 const userRouter = require('./resources/users/user.router');
 const boardRouter = require('./resources/boards/board.router');
 const taskRouter = require('./resources/tasks/task.router');
@@ -39,5 +41,17 @@ app.use('/', (req, res, next) => {
 app.use('/users', userRouter);
 app.use('/boards', boardRouter);
 app.use('/boards/:boardId/tasks', taskRouter);
+
+app.use((req, res, next) => {
+  next(createError(HttpStatus.NOT_FOUND));
+});
+
+// eslint-disable-next-line no-unused-vars
+app.use((error, req, res, next) => {
+  console.log('Error status: ', error.status);
+  console.log('Message: ', error.message);
+  res.status(error.status || HttpStatus.INTERNAL_SERVER_ERROR);
+  res.json({ message: error.message });
+});
 
 module.exports = app;
