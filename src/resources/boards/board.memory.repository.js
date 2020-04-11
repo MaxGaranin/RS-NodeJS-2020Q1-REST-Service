@@ -18,12 +18,20 @@ const create = async board => {
 
 const update = async board => {
   const index = dbBoards.findIndex(dbBoard => dbBoard.id === board.id);
-  dbBoards[index] = board;
+  if (index >= 0) {
+    dbBoards[index] = board;
+    return true;
+  }
+  return false;
 };
 
 const remove = async id => {
   const index = dbBoards.findIndex(dbBoard => dbBoard.id === id);
-  dbBoards.splice(index, 1);
+  if (index >= 0) {
+    dbBoards.splice(index, 1);
+    return true;
+  }
+  return false;
 };
 
 module.exports = { getAll, getById, create, update, remove };

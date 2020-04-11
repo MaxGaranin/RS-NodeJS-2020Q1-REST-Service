@@ -22,14 +22,22 @@ const create = async task => {
 
 const update = async task => {
   const index = dbTasks.findIndex(dbTask => dbTask.id === task.id);
-  dbTasks[index] = task;
+  if (index >= 0) {
+    dbTasks[index] = task;
+    return true;
+  }
+  return false;
 };
 
 const remove = async (id, boardId) => {
   const index = dbTasks.findIndex(
     dbTask => dbTask.id === id && dbTask.boardId === boardId
   );
-  dbTasks.splice(index, 1);
+  if (index >= 0) {
+    dbTasks.splice(index, 1);
+    return true;
+  }
+  return false;
 };
 
 module.exports = {

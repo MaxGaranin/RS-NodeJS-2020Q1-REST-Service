@@ -18,12 +18,20 @@ const create = async user => {
 
 const update = async user => {
   const index = dbUsers.findIndex(dbUser => dbUser.id === user.id);
-  dbUsers[index] = user;
+  if (index >= 0) {
+    dbUsers[index] = user;
+    return true;
+  }
+  return false;
 };
 
 const remove = async id => {
   const index = dbUsers.findIndex(dbUser => dbUser.id === id);
-  dbUsers.splice(index, 1);
+  if (index >= 0) {
+    dbUsers.splice(index, 1);
+    return true;
+  }
+  return false;
 };
 
 module.exports = { getAll, getById, create, update, remove };
