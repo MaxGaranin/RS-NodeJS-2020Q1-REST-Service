@@ -70,7 +70,7 @@ function throwIdIsNotValid(id) {
 }
 
 function throwIsNotFound(id) {
-  throw createError(HttpStatus.BAD_REQUEST, `User with id '${id}' not found`);
+  throw createError(HttpStatus.NOT_FOUND, `User with id '${id}' not found`);
 }
 
 function throwDataIsNotValid() {

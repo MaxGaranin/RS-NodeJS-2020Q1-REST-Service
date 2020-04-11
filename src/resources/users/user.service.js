@@ -10,12 +10,15 @@ const create = async user => await usersRepo.create(user);
 const update = async user => await usersRepo.update(user);
 
 const remove = async id => {
-  usersRepo.remove(id);
+  const result = usersRepo.remove(id);
+
   const tasks = await tasksRepo.getAllByUserId(id);
   tasks.forEach(async task => {
     task.userId = null;
     await tasksRepo.update(task);
   });
+
+  return result;
 };
 
 module.exports = { getAll, getById, create, update, remove };

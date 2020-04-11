@@ -7,7 +7,7 @@ const getAll = async () => {
 };
 
 const getById = async id => {
-  return dbBoards.find(dbUser => dbUser.id === id);
+  return dbBoards.find(dbBoard => dbBoard.id === id);
 };
 
 const create = async board => {

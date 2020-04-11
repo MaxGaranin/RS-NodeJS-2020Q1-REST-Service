@@ -68,7 +68,7 @@ function throwIdIsNotValid(id) {
 }
 
 function throwIsNotFound(id) {
-  throw createError(HttpStatus.BAD_REQUEST, `Board with id '${id}' not found`);
+  throw createError(HttpStatus.NOT_FOUND, `Board with id '${id}' not found`);
 }
 
 function throwDataIsNotValid() {

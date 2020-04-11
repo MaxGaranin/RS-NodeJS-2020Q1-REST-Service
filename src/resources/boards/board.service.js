@@ -10,9 +10,10 @@ const create = async board => await boardsRepo.create(board);
 const update = async board => await boardsRepo.update(board);
 
 const remove = async id => {
-  await boardsRepo.remove(id);
+  const result = await boardsRepo.remove(id);
   const tasks = await tasksRepo.getAllByBoardId(id);
   tasks.forEach(async task => await tasksRepo.remove(task.id, id));
+  return result;
 };
 
 module.exports = { getAll, getById, create, update, remove };

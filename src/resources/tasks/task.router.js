@@ -87,7 +87,7 @@ function throwBoardIdIsNotValid(boardId) {
 
 function throwIsNotFound(id, boardId) {
   throw createError(
-    HttpStatus.BAD_REQUEST,
+    HttpStatus.NOT_FOUND,
     `Task with id ${id} and boardId ${boardId} is not found`
   );
 }
