@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const express = require('express');
 const { finished } = require('stream');
 const swaggerUI = require('swagger-ui-express');
@@ -15,6 +16,14 @@ const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'));
 app.use(express.json());
 
 app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+
+process.on('uncaughtException', (error, origin) => {
+  console.error(`Сaptured uncaught exception: ${error.message}`);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error(`Unhandled rejection detected: ${reason.message}`);
+});
 
 app.use((req, res, next) => {
   const { method, url } = req;
@@ -46,7 +55,6 @@ app.use((req, res, next) => {
   next(createError(HttpStatus.NOT_FOUND));
 });
 
-// eslint-disable-next-line no-unused-vars
 app.use((error, req, res, next) => {
   console.log('Error status: ', error.status);
   console.log('Message: ', error.message);
