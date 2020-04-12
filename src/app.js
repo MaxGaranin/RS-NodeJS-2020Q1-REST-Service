@@ -1,3 +1,4 @@
+/* eslint-disable no-process-exit */
 /* eslint-disable no-unused-vars */
 const express = require('express');
 const { finished } = require('stream');
@@ -18,24 +19,21 @@ app.use(express.json());
 
 app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
-process.on('uncaughtException', (error, origin) => {
-  logger.error(`Сaptured uncaught exception: ${error.message}`);
-});
-
-process.on('unhandledRejection', (reason, promise) => {
-  logger.error(`Unhandled rejection detected: ${reason.message}`);
-});
-
-app.use((req, res, next) => {
-  const { method, url } = req;
-  const start = Date.now();
-
-  finished(res, () => {
-    const ms = Date.now() - start;
-    const { statusCode } = res;
-    logger.debug(`${method} ${url} ${statusCode} [${ms}ms]`);
+process
+  .on('unhandledRejection', (reason, promise) => {
+    logger.error(`Unhandled rejection detected: ${reason.message}`);
+  })
+  .on('uncaughtException', (error, origin) => {
+    logger.error(`Сaptured uncaught exception: ${error.message}`);
+    const { exit } = process;
+    exit(1);
   });
 
+app.use((req, res, next) => {
+  const { method, url, params, body } = req;
+  logger.info(
+    `${method} ${url} ${JSON.stringify(params)} ${JSON.stringify(body)}`
+  );
   next();
 });
 
