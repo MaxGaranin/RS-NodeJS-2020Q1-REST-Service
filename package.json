@@ -11,7 +11,7 @@
   "scripts": {
     "start": "nodemon src/server.js",
     "lint": "eslint ./ --ignore-path .gitignore --fix",
-    "test": "cross-env DEBUG=rs:* jest --testMatch \"<rootDir>/test/e2e/test/*.test.js\" --noStackTrace",
+    "test": "cross-env DEBUG=rs:* jest --testMatch \"<rootDir>/test/e2e/test/*.test.js\"",
     "test:auth": "cross-env DEBUG=rs:* TEST_MODE=auth jest --noStackTrace"
   },
   "keywords": [
@@ -51,6 +51,7 @@
     "express-async-handler": "^1.1.4",
     "http-errors": "^1.7.3",
     "http-status-codes": "^1.4.0",
+    "mongoose": "^5.9.9",
     "swagger-ui-express": "4.1.2",
     "uuid": "3.3.3",
     "winston": "^3.2.1",

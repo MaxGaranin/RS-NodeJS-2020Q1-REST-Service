@@ -152,7 +152,7 @@ describe('Users suite', () => {
       expect(deleteResponse.status).oneOf([200, 204]);
     });
 
-    it("should unassign user's tasks upon deletion", async () => {
+    xit("should unassign user's tasks upon deletion", async () => {
       // Setup:
       const userResponse = await request
         .post(routes.users.create)
