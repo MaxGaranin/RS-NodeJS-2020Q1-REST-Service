@@ -32,9 +32,11 @@ const connectToDB = cb => {
   const db = mongoose.connection;
   db.on('error', console.error.bind(console, 'connection error:'));
   db.once('open', () => {
-    console.log('we are connected!');
+    console.log('DB is connected!');
     db.dropDatabase();
     users.forEach(user => user.save());
+    boards.forEach(board => board.save());
+    tasks.forEach(task => task.save());
     cb();
   });
 };

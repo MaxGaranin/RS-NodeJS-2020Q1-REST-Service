@@ -2,6 +2,7 @@ const router = require('express').Router();
 const HttpStatus = require('http-status-codes');
 const createError = require('http-errors');
 const ash = require('express-async-handler');
+const Board = require('./board.model');
 const boardsService = require('./board.service');
 const { isValid } = require('./board.validator');
 const { isUuid } = require('./../../common/utils');
@@ -9,7 +10,7 @@ const { isUuid } = require('./../../common/utils');
 router.route('/').get(
   ash(async (req, res) => {
     const boards = await boardsService.getAll();
-    res.status(HttpStatus.OK).json(boards);
+    res.status(HttpStatus.OK).json(boards.map(Board.toResponse));
   })
 );
 
@@ -21,7 +22,7 @@ router.route('/:id').get(
     const board = await boardsService.getById(id);
     if (!board) throwIsNotFound(id);
 
-    res.status(HttpStatus.OK).json(board);
+    res.status(HttpStatus.OK).json(Board.toResponse(board));
   })
 );
 
@@ -31,7 +32,7 @@ router.route('/').post(
     if (!isValid(boardData)) throwDataIsNotValid();
 
     const board = await boardsService.create(boardData);
-    res.status(HttpStatus.OK).json(board);
+    res.status(HttpStatus.OK).json(Board.toResponse(board));
   })
 );
 
@@ -47,7 +48,7 @@ router.route('/:id').put(
     const result = await boardsService.update(boardData);
     if (!result) throwIsNotFound(id);
 
-    res.status(HttpStatus.OK).json(boardData);
+    res.status(HttpStatus.OK).json(Board.toResponse(boardData));
   })
 );
 

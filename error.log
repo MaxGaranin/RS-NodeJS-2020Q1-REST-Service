@@ -160,3 +160,209 @@
 {"message":"   404: Task with id 7862ece1-2139-4290-a674-ffe37508305e and boardId 53c18d54-f042-4ca2-ae28-ff33f7127aa3 is not found","level":"error"}
 {"message":"   404: Task with id f9214099-265a-489a-8a8c-a93f4e660335 and boardId 53c18d54-f042-4ca2-ae28-ff33f7127aa3 is not found","level":"error"}
 {"message":"   404: Task with id 6d1eed8a-8d23-4e9b-9006-c7a1f4eff0b2 and boardId 53c18d54-f042-4ca2-ae28-ff33f7127aa3 is not found","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Task data is not valid","level":"error"}
+{"message":"   400: Task id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Task data is not valid","level":"error"}
+{"message":"   400: Task id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Task data is not valid","level":"error"}
+{"message":"   400: Task id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Task data is not valid","level":"error"}
+{"message":"   400: Task id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Task data is not valid","level":"error"}
+{"message":"   400: Task id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   404: Board with id 'c36db358-5992-48dd-a56a-54aa48915ee1' not found","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   Сaptured uncaught exception: listen EADDRINUSE: address already in use :::4000","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   404: Board with id 'a9aee053-dc07-4e0e-821c-698b7c48caea' not found","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   404: Board with id '14b998f7-aff3-4b05-965b-2a43cf09e634' not found","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   404: Board with id '1335679e-5299-4c01-872d-12d1bb89bd33' not found","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   404: Board with id 'f93431b3-5470-4a8f-af12-96d7f3503638' not found","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   404: Board with id 'b345f9a2-cf7e-43f2-800d-62af98ea989c' not found","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   400: Board id undefined is not valid","level":"error"}
+{"message":"   404: Board with id '59ac6bd3-2957-4525-9c1f-109c0dbd1d9a' not found","level":"error"}
+{"message":"   404: Board with id '291e83cc-921f-4ac9-84f7-a0dec29a1dcf' not found","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   400: Task data is not valid","level":"error"}
+{"message":"   400: Task id undefined is not valid","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   404: Board with id '0cc8457c-2ec1-47fb-92de-973ffc0e3f23' not found","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   400: Task id undefined is not valid","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   400: Task data is not valid","level":"error"}
+{"message":"   400: Task id undefined is not valid","level":"error"}
+{"message":"   undefined: Cannot destructure property `id` of 'undefined' or 'null'.","level":"error"}
+{"message":"   404: Task with id f11ab0a5-24b3-434c-ac7a-5e7aa0eae36f and boardId 093721c3-9c5b-4e37-b866-5975f1d857ad is not found","level":"error"}
+{"message":"   404: Board with id '9f35d220-1175-4acb-bbf6-a6f1fa465b2e' not found","level":"error"}
+{"message":"   404: Task with id e8c5800d-8853-4c33-ac28-83a07dd2ff5c and boardId d69aef92-dfcb-4457-af27-3ff61107ff0e is not found","level":"error"}
+{"message":"   404: Task with id 07ae5e6b-a373-4ea1-b52c-d0cc79d765fa and boardId d69aef92-dfcb-4457-af27-3ff61107ff0e is not found","level":"error"}
+{"message":"   404: Task with id f171816f-f1a6-431b-b071-a295b0249fc7 and boardId d69aef92-dfcb-4457-af27-3ff61107ff0e is not found","level":"error"}
+{"message":"   404: Task with id de3f0fb7-29c8-499d-99fd-6dc07222c570 and boardId d69aef92-dfcb-4457-af27-3ff61107ff0e is not found","level":"error"}
+{"message":"   404: Task with id 30a90398-8051-45e3-911a-4244010adcfe and boardId d69aef92-dfcb-4457-af27-3ff61107ff0e is not found","level":"error"}
+{"message":"   404: Task with id 526162e0-fc1c-41f9-bb35-0515daf8c441 and boardId 1ea0514b-eb58-45b6-bac0-57de3311000d is not found","level":"error"}
+{"message":"   404: Board with id '146ae9d7-82f7-4359-ae15-f31c86e16e3b' not found","level":"error"}
+{"message":"   404: Task with id 54c9ceac-c5a2-492b-a022-34c9d865a0a3 and boardId d0ed2088-63a3-4cdd-8b78-f1b58e056845 is not found","level":"error"}
+{"message":"   404: Task with id 77547ded-852d-44f3-8050-13403c78360d and boardId d0ed2088-63a3-4cdd-8b78-f1b58e056845 is not found","level":"error"}
+{"message":"   404: Task with id 3db06524-b57b-4050-b976-a6193a39e8c1 and boardId d0ed2088-63a3-4cdd-8b78-f1b58e056845 is not found","level":"error"}
+{"message":"   404: Task with id 95b0f58a-a762-419c-a839-5119ddfacbd8 and boardId d0ed2088-63a3-4cdd-8b78-f1b58e056845 is not found","level":"error"}
+{"message":"   404: Task with id fdc11b98-4f15-42d1-9f9e-0a469e63b06e and boardId d0ed2088-63a3-4cdd-8b78-f1b58e056845 is not found","level":"error"}
+{"message":"   404: Task with id 60d1044d-1caf-47bc-93bc-befc9c1422e5 and boardId 53134031-0861-4019-a313-92d2de7a083f is not found","level":"error"}
+{"message":"   404: Board with id 'c1876474-40be-4073-9a5b-f2f39bf41559' not found","level":"error"}
+{"message":"   404: Task with id bf134b07-a7e8-4a52-ac2d-17583dc19cb0 and boardId b0001ab2-ffeb-4716-9e6c-f085f9f552f5 is not found","level":"error"}
+{"message":"   404: Task with id f5ba4516-c9e9-4bf8-9dfc-45227c20c2fe and boardId b0001ab2-ffeb-4716-9e6c-f085f9f552f5 is not found","level":"error"}
+{"message":"   404: Task with id b0f7d3bd-6785-4f2f-9b09-86de062621c1 and boardId b0001ab2-ffeb-4716-9e6c-f085f9f552f5 is not found","level":"error"}
+{"message":"   404: Task with id ec69c936-c51b-4ce5-b805-e495acb286ce and boardId b0001ab2-ffeb-4716-9e6c-f085f9f552f5 is not found","level":"error"}
+{"message":"   404: Task with id 90ca2558-c17c-43ed-9b2d-fb3cc3911139 and boardId b0001ab2-ffeb-4716-9e6c-f085f9f552f5 is not found","level":"error"}
+{"message":"   404: Task with id cf489a3d-202e-4948-bedc-c9d0ddbb83d1 and boardId 067b374f-32db-4068-ae54-704cf7847ab4 is not found","level":"error"}
+{"message":"   404: Board with id '66a7e209-383c-4330-8fca-0c6aa44a7417' not found","level":"error"}
+{"message":"   404: Task with id c5569d50-006a-49d6-b650-8b97f6774456 and boardId 7b1b77b6-70d4-4897-bc4e-e8aeeeccce55 is not found","level":"error"}
+{"message":"   404: Task with id d23f6154-d6f5-4861-a6d0-fa42d4c48221 and boardId 7b1b77b6-70d4-4897-bc4e-e8aeeeccce55 is not found","level":"error"}
+{"message":"   404: Task with id 8f795b56-6525-43cc-ace9-424285c35668 and boardId 7b1b77b6-70d4-4897-bc4e-e8aeeeccce55 is not found","level":"error"}
+{"message":"   404: Task with id 2e1b0cb0-1833-4058-a75f-d6aa1a75eed3 and boardId 7b1b77b6-70d4-4897-bc4e-e8aeeeccce55 is not found","level":"error"}
+{"message":"   404: Task with id 32c11ffc-0ee2-483e-99be-615cc22c6c92 and boardId 7b1b77b6-70d4-4897-bc4e-e8aeeeccce55 is not found","level":"error"}

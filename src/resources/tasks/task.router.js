@@ -2,6 +2,7 @@ const router = require('express').Router({ mergeParams: true });
 const HttpStatus = require('http-status-codes');
 const createError = require('http-errors');
 const ash = require('express-async-handler');
+const Task = require('./task.model');
 const tasksService = require('./task.service');
 const { isValid } = require('./task.validator');
 const { isUuid } = require('./../../common/utils');
@@ -12,7 +13,7 @@ router.route('/').get(
     if (!isUuid(boardId)) throwBoardIdIsNotValid(boardId);
 
     const tasks = await tasksService.getAllByBoardId(boardId);
-    res.status(HttpStatus.OK).json(tasks);
+    res.status(HttpStatus.OK).json(tasks.map(Task.toResponse));
   })
 );
 
@@ -26,7 +27,7 @@ router.route('/:id').get(
     const task = await tasksService.getById(id, boardId);
     if (!task) throwIsNotFound(id, boardId);
 
-    res.status(HttpStatus.OK).json(task);
+    res.status(HttpStatus.OK).json(Task.toResponse(task));
   })
 );
 
@@ -40,7 +41,7 @@ router.route('/').post(
 
     taskData.boardId = boardId;
     const task = await tasksService.create(taskData);
-    res.status(HttpStatus.OK).json(task);
+    res.status(HttpStatus.OK).json(Task.toResponse(task));
   })
 );
 
@@ -59,7 +60,7 @@ router.route('/:id').put(
     const result = await tasksService.update(taskData);
     if (!result) throwIsNotFound(id, boardId);
 
-    res.status(HttpStatus.OK).json(taskData);
+    res.status(HttpStatus.OK).json(Task.toResponse(taskData));
   })
 );
 
