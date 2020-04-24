@@ -366,3 +366,16 @@
 {"message":"   404: Task with id 8f795b56-6525-43cc-ace9-424285c35668 and boardId 7b1b77b6-70d4-4897-bc4e-e8aeeeccce55 is not found","level":"error"}
 {"message":"   404: Task with id 2e1b0cb0-1833-4058-a75f-d6aa1a75eed3 and boardId 7b1b77b6-70d4-4897-bc4e-e8aeeeccce55 is not found","level":"error"}
 {"message":"   404: Task with id 32c11ffc-0ee2-483e-99be-615cc22c6c92 and boardId 7b1b77b6-70d4-4897-bc4e-e8aeeeccce55 is not found","level":"error"}
+{"message":"   404: Not Found","level":"error"}
+{"message":"   404: Not Found","level":"error"}
+{"message":"   404: Not Found","level":"error"}
+{"message":"   404: Not Found","level":"error"}
+{"message":"   404: Not Found","level":"error"}
+{"message":"   404: Not Found","level":"error"}
+{"message":"   404: Not Found","level":"error"}
+{"message":"   404: Not Found","level":"error"}
+{"message":"   400: Unexpected token l in JSON at position 4","level":"error"}
+{"message":"   400: User data is not valid","level":"error"}
+{"message":"   401: Failed to authenticate","level":"error"}
+{"message":"   401: Failed to authenticate","level":"error"}
+{"message":"   401: Failed to authenticate token","level":"error"}

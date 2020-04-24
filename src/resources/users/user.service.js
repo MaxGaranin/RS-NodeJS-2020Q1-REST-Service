@@ -5,7 +5,10 @@ const getAll = async () => await usersRepo.getAll();
 
 const getById = async id => await usersRepo.getById(id);
 
-const create = async user => await usersRepo.create(user);
+const create = async user => {
+  if (!user.name) user.name = user.login;
+  await usersRepo.create(user);
+};
 
 const update = async user => await usersRepo.update(user);
 
