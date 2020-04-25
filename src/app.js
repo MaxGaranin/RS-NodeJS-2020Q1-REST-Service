@@ -5,7 +5,7 @@ const path = require('path');
 const YAML = require('yamljs');
 const HttpStatus = require('http-status-codes');
 const createError = require('http-errors');
-const { authenticate } = require('./auth/auth.middware');
+const authenticate = require('./auth/auth.middleware');
 const logger = require('./common/logger');
 const loginRouter = require('./auth/login.router');
 const userRouter = require('./resources/users/user.router');
@@ -17,10 +17,6 @@ const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'));
 
 app.use(express.json());
 
-app.use('*', authenticate);
-
-app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
-
 app.use((req, res, next) => {
   const { method, url, params, body } = req;
   logger.info(
@@ -28,6 +24,10 @@ app.use((req, res, next) => {
   );
   next();
 });
+
+app.use('*', authenticate);
+
+app.use('/doc', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
 app.use('/', (req, res, next) => {
   if (req.originalUrl === '/') {

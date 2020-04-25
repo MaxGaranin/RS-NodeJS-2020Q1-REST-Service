@@ -1,5 +1,5 @@
 function isValid(userData) {
-  const { login, password } = userData;
+  const { name, login, password } = userData;
   if (
     typeof name === 'string' &&
     typeof login === 'string' &&
