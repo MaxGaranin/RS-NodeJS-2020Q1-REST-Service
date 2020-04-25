@@ -1,8 +1,7 @@
 const HttpStatus = require('http-status-codes');
 const createError = require('http-errors');
-// const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { JWT_SECRET_KEY } = require('./../common/config');
+const { JWT_SECRET_KEY } = require('../common/config');
 
 function authenticate(req, res, next) {
   if (

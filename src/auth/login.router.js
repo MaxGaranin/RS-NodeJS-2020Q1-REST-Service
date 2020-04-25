@@ -1,25 +1,36 @@
 const router = require('express').Router();
-const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const HttpStatus = require('http-status-codes');
 const createError = require('http-errors');
 const ash = require('express-async-handler');
+const bcrypt = require('bcrypt');
 const usersService = require('./../resources/users/user.service');
-const { isValid } = require('./../resources/users/user.validator');
 const { JWT_SECRET_KEY } = require('./../common/config');
-const SALT_ROUNDS = 10;
 const EXPIRES_SECONDS = 300;
 
 router.route('/').get(
   ash(async (req, res) => {
-    const userData = req.body;
-    if (!isValid(userData)) {
-      throw createError(HttpStatus.BAD_REQUEST, 'User data is not valid');
+    const { login, password } = req.body;
+    if (!login || !password) {
+      throw createError(
+        HttpStatus.BAD_REQUEST,
+        'Login and password is not valid'
+      );
     }
 
-    const hash = await bcrypt.hash(userData.password, SALT_ROUNDS);
-    userData.passwordHash = hash;
-    const user = usersService.create(userData);
+    const user = await usersService.getFirstByProps({ login });
+    if (!user) {
+      throw createError(HttpStatus.BAD_REQUEST, 'Login is not valid');
+    }
+
+    const match = await bcrypt.compare(password, user.password);
+    if (!match) {
+      throw createError(
+        HttpStatus.BAD_REQUEST,
+        'Login and password is not valid'
+      );
+    }
+
     const token = jwt.sign(
       {
         data: {

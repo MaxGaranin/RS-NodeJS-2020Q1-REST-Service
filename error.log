@@ -379,3 +379,6 @@
 {"message":"   401: Failed to authenticate","level":"error"}
 {"message":"   401: Failed to authenticate","level":"error"}
 {"message":"   401: Failed to authenticate token","level":"error"}
+{"message":"   undefined: data and hash arguments required","level":"error"}
+{"message":"   undefined: Cannot read property 'password' of undefined","level":"error"}
+{"message":"   400: Login is not valid","level":"error"}

@@ -5,10 +5,15 @@ const getAll = async () => await usersRepo.getAll();
 
 const getById = async id => await usersRepo.getById(id);
 
-const create = async user => {
-  if (!user.name) user.name = user.login;
-  await usersRepo.create(user);
+const getByProps = async props => await usersRepo.getByProps(props);
+
+const getFirstByProps = async props => {
+  const users = await getByProps(props);
+  if (users.length === 0) return null;
+  return users[0];
 };
+
+const create = async user => await usersRepo.create(user);
 
 const update = async user => await usersRepo.update(user);
 
@@ -24,4 +29,12 @@ const remove = async id => {
   return result;
 };
 
-module.exports = { getAll, getById, create, update, remove };
+module.exports = {
+  getAll,
+  getById,
+  getByProps,
+  getFirstByProps,
+  create,
+  update,
+  remove
+};

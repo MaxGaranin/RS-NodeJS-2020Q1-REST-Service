@@ -23,7 +23,7 @@ const tasks = [...new Array(5)].map((_, idx) => {
   });
 });
 
-const connectToDB = cb => {
+const connectToDB = callback => {
   mongoose.connect(MONGO_CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -32,12 +32,12 @@ const connectToDB = cb => {
   const db = mongoose.connection;
   db.on('error', console.error.bind(console, 'connection error:'));
   db.once('open', () => {
-    console.log('DB is connected!');
+    console.log(`Database is connected on mongodb+srv://${db.host}`);
     db.dropDatabase();
     users.forEach(user => user.save());
     boards.forEach(board => board.save());
     tasks.forEach(task => task.save());
-    cb();
+    callback();
   });
 };
 
