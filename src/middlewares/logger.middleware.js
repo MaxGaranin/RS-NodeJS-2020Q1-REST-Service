@@ -10,7 +10,11 @@ const logger = createLogger({
       maxsize: 5242880, // 5MB
       tailable: true,
       level: 'error',
-      format: format.combine(format.uncolorize(), format.json())
+      format: format.combine(
+        format.uncolorize(),
+        format.timestamp(),
+        format.json()
+      )
     })
   ]
 });

@@ -15,6 +15,6 @@ process
 
 connectToDB(() => {
   app.listen(PORT, () =>
-    console.log(`App is running on http://localhost:${PORT}`)
+    logger.info(`App is running on http://localhost:${PORT}`)
   );
 });

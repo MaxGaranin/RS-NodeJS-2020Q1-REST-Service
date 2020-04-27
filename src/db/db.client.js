@@ -1,3 +1,4 @@
+const logger = require('./../middlewares/logger.middleware');
 const mongoose = require('mongoose');
 const { MONGO_CONNECTION_STRING } = require('./../common/config');
 const User = require('./../resources/users/user.model');
@@ -32,7 +33,7 @@ const connectToDB = callback => {
   const db = mongoose.connection;
   db.on('error', console.error.bind(console, 'connection error:'));
   db.once('open', () => {
-    console.log(`Database is connected on mongodb+srv://${db.host}`);
+    logger.info(`Database is connected on mongodb+srv://${db.host}`);
     db.dropDatabase();
     users.forEach(user => user.save());
     boards.forEach(board => board.save());

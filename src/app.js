@@ -20,7 +20,9 @@ app.use(express.json());
 app.use((req, res, next) => {
   const { method, url, params, body } = req;
   logger.info(
-    `${method} ${url} ${JSON.stringify(params)} ${JSON.stringify(body)}`
+    `${method} ${url} params: ${JSON.stringify(params)} body: ${JSON.stringify(
+      body
+    )}`
   );
   next();
 });
