@@ -6,7 +6,7 @@ const logger = createLogger({
   transports: [
     new transports.Console(),
     new transports.File({
-      filename: 'error.log',
+      filename: './logs/error.log',
       maxsize: 5242880, // 5MB
       tailable: true,
       level: 'error',

@@ -1,34 +1,22 @@
 const router = require('express').Router();
-const jwt = require('jsonwebtoken');
 const HttpStatus = require('http-status-codes');
 const createError = require('http-errors');
 const ash = require('express-async-handler');
-const bcrypt = require('bcrypt');
-const usersService = require('./../resources/users/user.service');
-const { JWT_SECRET_KEY } = require('./../common/config');
+const jwt = require('jsonwebtoken');
+const loginService = require('./login.service');
+const { JWT_SECRET_KEY } = require('../../common/config');
 const EXPIRES_SECONDS = 30;
 
 router.route('/').post(
   ash(async (req, res) => {
     const { login, password } = req.body;
     if (!login || !password) {
-      throw createError(
-        HttpStatus.FORBIDDEN,
-        'Login and password are not valid'
-      );
+      throw createForbiddenError();
     }
 
-    const user = await usersService.getFirstByProps({ login });
+    const user = await loginService.getUser(login, password);
     if (!user) {
-      throw createError(HttpStatus.FORBIDDEN, 'Login is not valid');
-    }
-
-    const match = await bcrypt.compare(password, user.password);
-    if (!match) {
-      throw createError(
-        HttpStatus.FORBIDDEN,
-        'Login and password are not valid'
-      );
+      throw createForbiddenError();
     }
 
     const token = jwt.sign(
@@ -45,5 +33,9 @@ router.route('/').post(
     res.status(HttpStatus.OK).json({ token });
   })
 );
+
+function createForbiddenError() {
+  return createError(HttpStatus.FORBIDDEN, 'Login and password are not valid');
+}
 
 module.exports = router;

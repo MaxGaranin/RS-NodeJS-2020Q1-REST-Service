@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable no-process-exit */
 const { PORT } = require('./common/config');
 const app = require('./app');
-const logger = require('./common/logger');
+const logger = require('./middlewares/logger.middleware');
 const { connectToDB } = require('./db/db.client');
 
 process
@@ -11,8 +10,7 @@ process
   })
   .on('uncaughtException', (error, origin) => {
     logger.error(`Сaptured uncaught exception: ${error.message}`);
-    const { exit } = process;
-    exit(1);
+    process.exitCode = 1;
   });
 
 connectToDB(() => {
