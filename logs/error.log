@@ -131,3 +131,69 @@
 {"message":"   404: Task with id b10b73db-8dc5-4363-a7ce-d8dee83a8601 and boardId 74197bcc-63e6-480d-a85e-7ed533492234 is not found","level":"error","timestamp":"2020-04-27T09:47:43.068Z"}
 {"message":"   404: Task with id 7de5237d-72d0-4ac9-9b6b-8e7222a5dabf and boardId 74197bcc-63e6-480d-a85e-7ed533492234 is not found","level":"error","timestamp":"2020-04-27T09:47:43.120Z"}
 {"message":"   404: Task with id 861f751b-e46b-4d13-8b95-b0330a681c43 and boardId 74197bcc-63e6-480d-a85e-7ed533492234 is not found","level":"error","timestamp":"2020-04-27T09:47:43.159Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.363Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.379Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.383Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.387Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.391Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.437Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.448Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.451Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.453Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.456Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.460Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.473Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.477Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.480Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-04-27T09:49:49.482Z"}
+{"message":"   404: Task with id 42f9e08f-5ddf-4a87-9642-50767d3c7375 and boardId 801d21b0-751b-4a82-838b-37eed0b308d3 is not found","level":"error","timestamp":"2020-04-27T09:49:50.749Z"}
+{"message":"   404: Board with id '0a715c56-7521-4c3a-9380-9ce6eafe3632' not found","level":"error","timestamp":"2020-04-27T09:49:51.086Z"}
+{"message":"   404: Task with id 79c2e3b5-562d-4502-afac-f309ec1b806c and boardId 105f4206-ce80-4224-aba9-6b6a95b33d8e is not found","level":"error","timestamp":"2020-04-27T09:49:51.821Z"}
+{"message":"   404: Task with id 696f89a8-05d7-4fe8-bd23-747d880fb6d3 and boardId 105f4206-ce80-4224-aba9-6b6a95b33d8e is not found","level":"error","timestamp":"2020-04-27T09:49:51.838Z"}
+{"message":"   404: Task with id 72d468d7-a355-4319-81e3-a8aa2013f25f and boardId 105f4206-ce80-4224-aba9-6b6a95b33d8e is not found","level":"error","timestamp":"2020-04-27T09:49:51.864Z"}
+{"message":"   404: Task with id b32117fc-2512-4205-86a8-2aac19e74a99 and boardId 105f4206-ce80-4224-aba9-6b6a95b33d8e is not found","level":"error","timestamp":"2020-04-27T09:49:51.887Z"}
+{"message":"   404: Task with id b3f5cdc8-b992-487b-8c1d-d48cfee9ce4b and boardId 105f4206-ce80-4224-aba9-6b6a95b33d8e is not found","level":"error","timestamp":"2020-04-27T09:49:51.889Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.478Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.486Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.488Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.498Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.500Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.624Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.628Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.630Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.644Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.646Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.648Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.650Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.652Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.654Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:01:34.656Z"}
+{"message":"   404: Board with id '518bdde8-5058-40cc-9435-d222ac317fb1' not found","level":"error","timestamp":"2020-05-07T20:01:36.084Z"}
+{"message":"   404: Task with id 712e6c68-e94d-4119-a4fa-44721dc43277 and boardId bcd46c85-e46a-42cc-995f-54f3d37af296 is not found","level":"error","timestamp":"2020-05-07T20:01:36.352Z"}
+{"message":"   404: Task with id abe5d287-031a-4f23-ac9f-e81ba936f2d5 and boardId 078de9b2-3fda-4f87-9c65-8aa51ae771a5 is not found","level":"error","timestamp":"2020-05-07T20:01:36.818Z"}
+{"message":"   404: Task with id f9fae3fd-b3f1-4fce-a1de-ce870340dbde and boardId 078de9b2-3fda-4f87-9c65-8aa51ae771a5 is not found","level":"error","timestamp":"2020-05-07T20:01:36.827Z"}
+{"message":"   404: Task with id c87ce3e9-5632-4d16-b6cd-99bf852adccf and boardId 078de9b2-3fda-4f87-9c65-8aa51ae771a5 is not found","level":"error","timestamp":"2020-05-07T20:01:36.834Z"}
+{"message":"   404: Task with id 22b69190-0226-4cd5-8cdb-1eacfa0a4869 and boardId 078de9b2-3fda-4f87-9c65-8aa51ae771a5 is not found","level":"error","timestamp":"2020-05-07T20:01:36.855Z"}
+{"message":"   404: Task with id 71485c18-2598-46b7-b3ad-8d2fc2102382 and boardId 078de9b2-3fda-4f87-9c65-8aa51ae771a5 is not found","level":"error","timestamp":"2020-05-07T20:01:36.869Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.843Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.862Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.883Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.888Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.892Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.934Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.948Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.952Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.954Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.957Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.960Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.962Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.966Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.969Z"}
+{"message":"   401: Failed to authenticate","level":"error","timestamp":"2020-05-07T20:06:30.971Z"}
+{"message":"   404: Task with id d942c912-6187-4d8f-8e35-0dd9ec2106dd and boardId 25c8d463-97bf-481a-857c-b0db086cef1f is not found","level":"error","timestamp":"2020-05-07T20:06:32.262Z"}
+{"message":"   404: Board with id '25dd6ffa-1c9d-473c-8077-4b442ebfcce7' not found","level":"error","timestamp":"2020-05-07T20:06:32.384Z"}
+{"message":"   404: Task with id 10e84d59-a635-4bf8-b836-5285a1a74185 and boardId 79272afe-2ea8-4ef2-bd46-d72cea2bf1a1 is not found","level":"error","timestamp":"2020-05-07T20:06:33.071Z"}
+{"message":"   404: Task with id 7345924a-a980-4ff3-8c7b-efa09de93ce5 and boardId 79272afe-2ea8-4ef2-bd46-d72cea2bf1a1 is not found","level":"error","timestamp":"2020-05-07T20:06:33.078Z"}
+{"message":"   404: Task with id f7389db9-dfbe-4754-8c0f-3e0b3b37848b and boardId 79272afe-2ea8-4ef2-bd46-d72cea2bf1a1 is not found","level":"error","timestamp":"2020-05-07T20:06:33.083Z"}
+{"message":"   404: Task with id bd89c726-4245-44bf-97e9-becd45847205 and boardId 79272afe-2ea8-4ef2-bd46-d72cea2bf1a1 is not found","level":"error","timestamp":"2020-05-07T20:06:33.086Z"}
+{"message":"   404: Task with id 0cf28b4d-eb73-477b-8e60-09845a0ca9ff and boardId 79272afe-2ea8-4ef2-bd46-d72cea2bf1a1 is not found","level":"error","timestamp":"2020-05-07T20:06:33.117Z"}

@@ -1,10 +1,11 @@
 const uuid = require('uuid');
 const mongoose = require('mongoose');
+const { Column, columnSchema } = require('../columns/column.model');
 
 const boardSchema = new mongoose.Schema(
   {
     title: String,
-    columns: Array,
+    columns: [columnSchema],
     _id: {
       type: String,
       default: uuid
@@ -17,7 +18,8 @@ const boardSchema = new mongoose.Schema(
 
 boardSchema.statics.toResponse = board => {
   const { id, title, columns } = board;
-  return { id, title, columns };
+  const cols = columns.map(column => Column.toResponse(column));
+  return { id, title, columns: cols };
 };
 
 const Board = mongoose.model('Board', boardSchema);

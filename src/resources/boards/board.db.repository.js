@@ -17,7 +17,21 @@ const create = async board => {
 };
 
 const update = async board => {
-  return (await Board.updateOne({ _id: board.id }, board)).ok;
+  return (
+    await Board.updateOne(
+      { _id: board.id },
+      {
+        ...board,
+        columns: board.columns.map(curr => {
+          return {
+            _id: curr.id,
+            title: curr.title,
+            order: curr.order
+          };
+        })
+      }
+    )
+  ).ok;
 };
 
 const remove = async id => {
